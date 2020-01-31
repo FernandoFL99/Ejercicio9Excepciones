@@ -18,4 +18,18 @@ public class Alumno
     private static int num_asignaturas=5;
     private String nombre;
     private ArrayList<Double> notas;
+
+    public Alumno() 
+    {
+        this.notas = new ArrayList<>();
+        nombre="";
+    }
+
+    public Alumno(String nombre) {
+        this.notas = new ArrayList<>();
+        this.nombre = nombre;
+ 
+    }
+    
+    
 }
