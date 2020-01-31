@@ -47,5 +47,20 @@ public class Alumno
         }
     }
     
+    public void modificarNota(int posicion, double nnota) throws RangoException
+    {
+        posicion= LeerPorTeclado.leerInt("Que posicion quieres modificar");
+        nnota= LeerPorTeclado.leerDouble("Introduce la nota nueva");
+        notas.set(posicion, nnota);
+    }
+    
+    public void imprimirCalificaciones()
+    {
+        for (int i = 0; i < Alumno.num_asignaturas; i++) 
+        {
+            System.out.println(notas.get(i));
+        }
+    }
+
     
 }
