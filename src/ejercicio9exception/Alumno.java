@@ -38,7 +38,14 @@ public class Alumno
         this.nombre = nombre;
     }
     
-    
+    public void pedirNotas() throws RangoException
+    {
+        for (int i = 0; i < Alumno.num_asignaturas; i++) 
+        {
+            double n=LeerPorTeclado.leerDouble("Dame la nota:");
+            notas.add(n);
+        }
+    }
     
     
 }
