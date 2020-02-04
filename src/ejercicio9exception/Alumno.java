@@ -78,6 +78,10 @@ public class Alumno
     public void modificarNota(int posicion, double nnota) throws RangoException
     {
         posicion= LeerPorTeclado.leerInt("Que posicion quieres modificar");
+        if(posicion>Alumno.num_asignaturas || posicion<0)
+        {
+            throw new RangoException("");
+        }
         nnota= LeerPorTeclado.leerDouble("Introduce la nota nueva");
         notas.set(posicion, nnota);
     }

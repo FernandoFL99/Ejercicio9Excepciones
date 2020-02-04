@@ -5,6 +5,8 @@
  */
 package ejercicio9exception;
 
+import java.util.InputMismatchException;
+
 /**
  *
  * @author ferna
@@ -21,17 +23,24 @@ public class Ejercicio9Exception {
         try{
         String nombre= LeerPorTeclado.leerString("Introduce el nombre del alumno");
         a1.setNombre(nombre);
-        a1.getNombre();
         
         a1.pedirNotas();
         
         a1.modificarNota(0, 0);
-        
+            System.out.println("Las notas de "+a1.getNombre()+" son:");
         a1.imprimirCalificaciones();
         }
-        catch(RangoException | StringVacio e1)
+        catch(RangoException | StringVacio | InputMismatchException e1)
         {
-            System.out.println("Error: " +e1.getMessage());
+            if(e1 instanceof InputMismatchException)
+            {
+            System.out.println("Error: El dato introducido no se corresponde con el que te piden");
+            }
+            else
+            {
+                System.out.println("Error: "+e1.getMessage());
+            }
+            
         }
     }
     

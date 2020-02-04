@@ -19,7 +19,7 @@ public class LeerPorTeclado
     * Si el imput no es correcto el dato se pedira de nuevo
     * @param mensaje es el mensaje que se le monstrara al usuario
     * @return devuelve el dato que introduce el usuario
-     * @throws ejercicio4static.StringVacio
+     * @throws ejercicio9exception.StringVacio
 
     */
     public static String leerString(String mensaje) throws StringVacio
@@ -28,6 +28,10 @@ public class LeerPorTeclado
         Scanner teclado = new Scanner(System.in);
         System.out.println(mensaje);
         dato=teclado.nextLine();
+        if(dato.isEmpty())
+            {
+                throw new StringVacio("No has introducido ningun dato");
+            }
         return dato;
     }
     
@@ -35,14 +39,19 @@ public class LeerPorTeclado
     * Esto nos permite leer un caracter
     * @param mensaje es el mensaje que se le monstrara al usuario
     * @return devuelve el dato que introduce el usuario
+     * @throws ejercicio9exception.StringVacio
     */
-    public static char leerChar(String mensaje) throws StringIndexOutOfBoundsException
+    public static char leerChar(String mensaje) throws StringVacio
     {
         char dato;
         Scanner teclado = new Scanner(System.in);
         System.out.println(mensaje);
         dato=teclado.nextLine().charAt(0);
         String comparar=""+dato;
+        if(comparar.isEmpty())
+        {
+            throw new StringVacio("No has introducido ningun dato");
+        }
         return dato;
     }
 

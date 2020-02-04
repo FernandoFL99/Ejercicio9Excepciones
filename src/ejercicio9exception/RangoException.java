@@ -19,5 +19,4 @@ public class RangoException extends Exception
         */
         super(message);
     }
-    
 }
