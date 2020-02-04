@@ -21,6 +21,7 @@ public class Ejercicio9Exception {
         String nombre= LeerPorTeclado.leerString("Introduce el nombre del alumno");
         a1.setNombre(nombre);
         a1.getNombre();
+
     }
     
 }
