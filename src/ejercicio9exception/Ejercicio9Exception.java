@@ -18,10 +18,21 @@ public class Ejercicio9Exception {
     {
         Alumno a1 = new Alumno();
         
+        try{
         String nombre= LeerPorTeclado.leerString("Introduce el nombre del alumno");
         a1.setNombre(nombre);
         a1.getNombre();
-
+        
+        a1.pedirNotas();
+        
+        a1.modificarNota(0, 0);
+        
+        a1.imprimirCalificaciones();
+        }
+        catch(RangoException | StringVacio e1)
+        {
+            System.out.println("Error: " +e1.getMessage());
+        }
     }
     
 }
