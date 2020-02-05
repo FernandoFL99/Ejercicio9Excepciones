@@ -27,7 +27,7 @@ public class Ejercicio9Exception {
         a1.pedirNotas();
         
         a1.modificarNota(0, 0);
-            System.out.println("Las notas de "+a1.getNombre()+" son:");
+        System.out.println("Las notas de "+a1.getNombre()+" son:");
         a1.imprimirCalificaciones();
         }
         catch(RangoException | StringVacio | InputMismatchException e1)
