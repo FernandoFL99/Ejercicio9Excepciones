@@ -80,7 +80,7 @@ public class Alumno
         posicion= LeerPorTeclado.leerInt("Que posicion quieres modificar");
         if(posicion>Alumno.num_asignaturas || posicion<0)
         {
-            throw new RangoException("");
+            throw new RangoException("El rango no es correcto");
         }
         nnota= LeerPorTeclado.leerDouble("Introduce la nota nueva");
         notas.set(posicion, nnota);
