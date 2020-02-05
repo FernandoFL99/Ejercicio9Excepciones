@@ -40,8 +40,6 @@ public class Ejercicio9Exception {
             {
                 System.out.println("Error: "+e1.getMessage());
             }
-            
         }
     }
-    
 }

@@ -62,8 +62,15 @@ public class Alumno
     {
         for (int i = 0; i < Alumno.num_asignaturas; i++) 
         {
-            double n=LeerPorTeclado.leerDouble("Dame la nota:");
-            notas.add(n);
+            double n=LeerPorTeclado.leerDouble("Dame la nota:");;
+            if(n<0 || n>10)
+            {
+                throw new RangoException("La nota no es correcta");
+            }
+            else
+            {
+                notas.add(n);
+            }
         }
     }
     
